@@ -15,6 +15,7 @@ function calculateResult(){
 
     conta = conta.replace(/÷/g, '/');
     conta = conta.replace(/×/g, '*');
+    conta = conta.replace(/,/g, '.');
 
     try{
         const result = eval(conta); // Calcula a expressão da tela. Retorna undefined se a expressão estiver vazia.
