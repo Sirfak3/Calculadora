@@ -16,9 +16,17 @@ function calculateResult(){
     conta = conta.replace(/÷/g, '/');
     conta = conta.replace(/×/g, '*');
     conta = conta.replace(/,/g, '.');
+    
+    if (conta.length > 1 == true && conta.startsWith('0') == true && conta.includes(',') == true){
+        document.getElementById("tela").value = conta;
+    }else{
+        conta = conta.replace(/0/, '');
+        document.getElementById("tela").value = conta;
+        document.getElementById("historico").value = conta;
+    }
 
     try{
-        const result = eval(conta); // Calcula a expressão da tela. Retorna undefined se a expressão estiver vazia.
+        let result = eval(conta); // Calcula a expressão da tela. Retorna undefined se a expressão estiver vazia.
 
         document.getElementById("tela").value = result; // Imprime na tela o resultado do calculo.
 
