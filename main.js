@@ -45,7 +45,7 @@ function calculateResult(){
     conta = conta.replace(/^0+(?=[^,])/, ''); // Remove o 0(zero) da conta que inicie com o mesmo e não seja seguido de uma virgula.
 
     conta = conta.replace(/√/, 'Math.sqrt(').replace(/$/, ')'; 
-    if (valor.startsWith('√') = false) {
+    if (conta.includes('(') = false) {
     conta = conta.replace(/)/, '');
     }
     
