@@ -72,6 +72,7 @@ input{
     justify-content: space-between;
     align-self: center;
     padding-bottom: 15px;
+    flex-direction: column;
     
     & .fcBtn{
         width: 40px;    height: 30px;
