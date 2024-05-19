@@ -22,6 +22,9 @@ function clearMemoria(){
     memoria = '';
 }
 
+//raiz cubica = Math.cbrt();
+//raiz quadrada = Math.sqrt()
+
 // Função para deletar o ultimo número ▼.
 function deletar(){
     const valores = document.getElementById("tela").value;
@@ -39,7 +42,8 @@ function calculateResult(){
     conta = conta.replace(/×/g, '*');
     conta = conta.replace(/,/g, '.');
 
-    conta = conta.replace(/^0+(?=[^,])/, ""); // Remove o 0(zero) da conta que inicie com o mesmo e não seja seguido de uma virgula.
+    conta = conta.replace(/^0+(?=[^,])/, ''); // Remove o 0(zero) da conta que inicie com o mesmo e não seja seguido de uma virgula.
+    conta = conta.replace(/√/g, 'Math.sqrt(').replace(/$/, ')');
     
     try{
         let result = eval(conta); // Transforma o valor da tela em uma expressão númerica. Retorna undefined se a tela estiver vazia.
