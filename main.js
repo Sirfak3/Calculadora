@@ -53,7 +53,7 @@ function calculateResult(){
 
     conta = conta.replace(/^0+(?=[^,])/, ''); // Remove o 0(zero) da conta que inicie com o mesmo e não seja seguido de uma virgula.
 
-    conta = conta.replace(/√/, 'Math.sqrt()'); 
+    conta = conta.replace(/√/, 'Math.sqrt('); 
     
     try{
         let result = eval(conta); // Transforma o valor da tela em uma expressão númerica. Retorna undefined se a tela estiver vazia.
