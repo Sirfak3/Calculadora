@@ -32,6 +32,15 @@ function deletar(){
     document.getElementById("tela").value = valoresnew;
 }
 
+var elemento = document.getElementById('tela');
+var valor = elemento.value;
+elemento.addEventListener('input', function() {
+    var valorAtual = elemento.value;
+    if (valorAtual.startsWith('√')) {
+        elemento.value = valorAtual + ')';
+    }
+});
+
 // Função para calcular ▼.
 function calculateResult(){
     let conta = document.getElementById("tela").value; 
