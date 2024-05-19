@@ -16,7 +16,7 @@ function adcMemoria(){
     memoria = document.getElementById("tela").value;
 }
 function chamarMemoria(){
-    document.getElementById("tela").value = memoria;
+    document.getElementById("tela").value += memoria;
 }
 function clearMemoria(){
     memoria = '';
