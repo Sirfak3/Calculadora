@@ -42,7 +42,7 @@ function calculateResult(){
     conta = conta.replace(/^0+(?=[^,])/, ""); // Remove o 0(zero) da conta que inicie com o mesmo e não seja seguido de uma virgula.
     
     try{
-        let result = eval(newconta); // Transforma o valor da tela em uma expressão númerica. Retorna undefined se a tela estiver vazia.
+        let result = eval(conta); // Transforma o valor da tela em uma expressão númerica. Retorna undefined se a tela estiver vazia.
         document.getElementById("tela").value = result; // Imprime o resultado da expressão na tela.
     }
     catch(error){
