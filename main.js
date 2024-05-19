@@ -47,6 +47,8 @@ function calculateResult(){
     conta = conta.replace(/√/, 'Math.sqrt(').replace(/$/, ')'; 
     if (conta.includes('(') = false) {
     conta = conta.replace(/)/, '');
+    }else{
+        undefined;
     }
     
     try{
