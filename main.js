@@ -9,6 +9,19 @@ function clearTela(){ // Limpa a tela e o histórico.
     document.getElementById("historico").value = '';
 }
 
+function moveCursor(direction) {
+            const input = document.getElementById('textInput');
+            const cursorPos = input.selectionStart;
+
+            if (direction === 'left') {
+                input.setSelectionRange(cursorPos - 1, cursorPos - 1);
+            } else if (direction === 'right') {
+                input.setSelectionRange(cursorPos + 1, cursorPos + 1);
+            }
+
+            input.focus();
+}
+
 // Funções para memoria ▼.
 var memoria = document.getElementById("tela").value;
 
@@ -43,8 +56,8 @@ function calculateResult(){
     conta = conta.replace(/,/g, '.');
 
     conta = conta.replace(/^0+(?=[^,])/, ''); // Remove o 0(zero) da conta que inicie com o mesmo e não seja seguido de uma virgula.
-    conta = conta.replace(/√/, 'Math.sqrt(').replace(/$/, ')'; 
-
+    conta = conta.replace(/√/, 'Math.sqrt');
+    
     try{
         let result = eval(conta); // Transforma o valor da tela em uma expressão númerica. Retorna undefined se a tela estiver vazia.
         document.getElementById("tela").value = result; // Imprime o resultado da expressão na tela.
