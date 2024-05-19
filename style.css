@@ -59,6 +59,7 @@ input{
 .ac{
     width: 40px;
     border-radius: 5px 0 0 5px;
+    border: solid 1px gray;
 
     &.ac:hover{
         background-color: #d6d6d6;
