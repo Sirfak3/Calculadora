@@ -14,10 +14,16 @@
         </div>
         <div class="display">
             <button class="btn ac" onclick="clearTela()">AC</button>
-            <input id="tela" type="text" placeholder="0" readonly>
+            <input id="tela" type="text" placeholder="0" >
+        </div>
+        <div class="btnsFunctions">
+            <button class="fcBtn" onclick="adcMemoria()">M+</button>
+            <button class="fcBtn" onclick="clearMemoria()">M-</button>
+            <button class="fcBtn" onclick="chamarMemoria()">Mr</button>
+            <button class="fcBtn" onclick="operador('%')">%</button>
+            <button class="fcBtn" onclick="deletar()">Del</button>
         </div>
         <div class="botoes"> 
-            
             <div id="botoes0-9-vq">
                 <button class="btn" onclick="nmr('7')">7</button>
                 <button class="btn" onclick="nmr('8')">8</button>
