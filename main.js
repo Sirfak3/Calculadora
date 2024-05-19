@@ -11,7 +11,6 @@ function clearTela(){ // Limpa a tela e o histórico.
 
 // Funções para memoria ▼.
 var memoria = document.getElementById("tela").value;
-memoria = memoria;
 
 function adcMemoria(){
     memoria = document.getElementById("tela").value;
