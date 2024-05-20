@@ -72,15 +72,12 @@ input{
     justify-content: space-between;
     align-self: center;
     padding-bottom: 15px;
-    flex-direction: column;
     
     & .fcBtn{
-        display: flex;
         width: 40px;    height: 30px;
         font-size: 15px;
         border: solid 1px gray;
         border-radius: 40%;
-        flex-direction: row;
 
         &.fcBtn:hover{
             background-color: #d6d6d6;
