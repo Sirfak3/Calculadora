@@ -60,6 +60,8 @@ function deletar(){
 
     const valores = document.getElementById("tela").value;
 
+    conta = conta.replace(/%/g, '÷100×');
+
     const valoresnew = valores.replace(/.$/, '');
 
     document.getElementById("tela").value = valoresnew;
@@ -74,13 +76,10 @@ function calculateResult(){
 
     let conta = document.getElementById("tela").value; 
 
-    conta = conta.replace(/÷100×+(?=\D|$)/, '÷100')
 
     document.getElementById("historico").value = conta; // Imprime a expressão na caixa superior.
 
-    
-
-    conta = conta.replace(/%/g, '÷100×');
+    conta = conta.replace(/÷100×+(?=\D|$)/, '÷100')
 
     // Substitui os simbolos ▼.
     conta = conta.replace(/÷/g, '/');
