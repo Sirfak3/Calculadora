@@ -9,19 +9,6 @@ function clearTela(){ // Limpa a tela e o histórico.
     document.getElementById("historico").value = '';
 }
 
-function moveCursor(direction) {
-            const input = document.getElementById('textInput');
-            const cursorPos = input.selectionStart;
-
-            if (direction === 'left') {
-                input.setSelectionRange(cursorPos - 1, cursorPos - 1);
-            } else if (direction === 'right') {
-                input.setSelectionRange(cursorPos + 1, cursorPos + 1);
-            }
-
-            input.focus();
-}
-
 // Funções para memoria ▼.
 var memoria = document.getElementById("tela").value;
 
