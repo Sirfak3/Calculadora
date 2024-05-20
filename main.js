@@ -75,11 +75,9 @@ function deletar(){
 function calculateResult(){
 
     let conta = document.getElementById("tela").value; 
-
+    conta = conta.replace(/÷100×+(?=\D|$)/, '÷100')
 
     document.getElementById("historico").value = conta; // Imprime a expressão na caixa superior.
-
-    conta = conta.replace(/÷100×+(?=\D|$)/, '÷100')
 
     // Substitui os simbolos ▼.
     conta = conta.replace(/÷/g, '/');
