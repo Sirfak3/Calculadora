@@ -60,8 +60,6 @@ function deletar(){
 
     const valores = document.getElementById("tela").value;
 
-    conta = conta.replace(/%/g, '÷100×');
-
     const valoresnew = valores.replace(/.$/, '');
 
     document.getElementById("tela").value = valoresnew;
@@ -75,11 +73,25 @@ function deletar(){
 function calculateResult(){
 
     let conta = document.getElementById("tela").value; 
-    conta = conta.replace(/÷100×+(?=\D|$)/, '÷100')
+
+    
+
+    conta = conta.replace(/^0+(?=[^,])/, ''); // Remove o 0(zero) da conta que inicie com o mesmo e não seja seguido de uma virgula.
+
+    
 
     document.getElementById("historico").value = conta; // Imprime a expressão na caixa superior.
 
+    
+
+    conta = conta.replace(/%/g, '÷100×');
+
+    conta = conta.replace(/÷100×+(?=\D|$)/, '÷100')
+
+
+
     // Substitui os simbolos ▼.
+
     conta = conta.replace(/÷/g, '/');
 
     conta = conta.replace(/×/g, '*');
@@ -88,7 +100,7 @@ function calculateResult(){
 
 
 
-    conta = conta.replace(/^0+(?=[^,])/, ''); // Remove o 0(zero) da conta que inicie com o mesmo e não seja seguido de uma virgula.
+    
 
     
 
@@ -148,4 +160,4 @@ function calculateResult(){
 
     }
 
-        }
+                        }
